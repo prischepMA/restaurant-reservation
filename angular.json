@@ -48,6 +48,10 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
               "baseHref": "https://prischepma.github.io/restaurant-booking/",
               "budgets": [
                 {
