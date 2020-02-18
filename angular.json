@@ -48,7 +48,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "baseHref": "https://prischepma.github.io/restaurant-booking-front-end/",
+              "baseHref": "https://prischepma.github.io/restaurant-booking/",
               "budgets": [
                 {
                   "type": "initial",
