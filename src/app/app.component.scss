@@ -1,0 +1,38 @@
+#header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  #logo, #sing-in-up-container {
+      display: flex;
+      align-items: center;
+  }
+
+  #logo {
+    width: 150px;
+  }
+
+  .menu {
+    a {
+      color: rgba(0, 0, 0, 0.65);
+      margin: 0 5px;
+    }
+    a:hover {
+      color: #da3743;
+    }
+  }
+
+  #sing-in-up-container button, #logo {
+    margin: 10px;
+  }
+
+  #sing-in-up-container button:hover {
+    color: #da3743;
+    border-color: #da3743;
+  }
+}
+
+#footer {
+  background-color: #333;
+  height: 180px;
+}

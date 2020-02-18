@@ -1,0 +1,30 @@
+<div class="main-page">
+    <div class="page-img">
+        <div class="content-block">
+            <div class="dtp-title">
+                <div class="content-block-header">
+                    <h1>Найдите своё место для любого случая</h1>
+                </div>
+                <div class="content-block-body">
+                    <div class="calendar">
+                        <nz-date-picker [nzSize]="'large'"></nz-date-picker>
+                    </div>
+                    <div class="time">
+                        <nz-time-picker [nzSize]="'large'" style="width: 180px;"></nz-time-picker>
+                    </div>
+                    <div class="number-of-people">
+                        <nz-select [nzSize]="'large'" nzShowSearch nzAllowClear style="width: 230px;" nzPlaceHolder="Выберите кол-во гостей">
+                            <nz-option nzLabel="1" nzValue="1"></nz-option>
+                            <nz-option nzLabel="2" nzValue="2"></nz-option>
+                            <nz-option nzLabel="3" nzValue="3"></nz-option>
+                        </nz-select>
+                    </div>
+                    <div class="search-button">
+                        <button nz-button nzType="primary" [nzSize]="'large'">Искать<i nz-icon
+                            nzType="search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
