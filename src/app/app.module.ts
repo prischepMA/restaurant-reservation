@@ -9,11 +9,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import {
   NzButtonModule,
-  NzDatePickerModule, 
-  NZ_I18N, 
-  ru_RU, 
-  NzTimePickerModule, 
-  NzInputNumberModule, 
+  NzDatePickerModule,
+  NZ_I18N,
+  ru_RU,
+  NzTimePickerModule,
+  NzInputNumberModule,
   NzSelectModule,
   NzMenuModule
 } from 'ng-zorro-antd';
@@ -30,7 +30,7 @@ import * as AllIcons from '@ant-design/icons-angular/icons';
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
 };
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key]);
 
 @NgModule({
   declarations: [
