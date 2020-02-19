@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
+import { RestaurantsListComponent } from './restaurants/restaurants-list/restaurants-list.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full'},
-  { path: 'main', component: MainPageComponent },
+  { path: 'main', component: MainPageComponent }
 ];
 
 @NgModule({
