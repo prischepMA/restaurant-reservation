@@ -26,6 +26,9 @@ registerLocaleData(ru);
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NZ_ICONS } from 'ng-zorro-antd';
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { RestaurantsListComponent } from './restaurants/restaurants-list/restaurants-list.component';
+import { RestaurantProfileComponent } from './restaurants/restaurant-profile/restaurant-profile.component';
+import { RestaurantsModule } from './restaurants/restaurants.module';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -49,6 +52,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     HttpClientModule,
     NzMenuModule,
     AppRoutingModule,
+    RestaurantsModule,
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       name: 'App Devtools',
