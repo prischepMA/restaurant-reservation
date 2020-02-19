@@ -52,7 +52,7 @@
                 "src/favicon.ico",
                 "src/assets"
               ],
-              "baseHref": "https://prischepma.github.io/restaurant-booking/",
+              "baseHref": "https://restaurant-booking-d701d.firebaseapp.com/",
               "budgets": [
                 {
                   "type": "initial",

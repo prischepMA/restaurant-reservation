@@ -18,9 +18,9 @@ script:
   - npm run-script build
 
 deploy:
-  provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: dist/restaurant-booking
+  provider: firebase
+  token:
+    secure: "1//0397gsLg6JRi3CgYIARAAGAMSNwF-L9Irtms1I5XnlK3ZuwEYdL9hovsOiug90mlCItRpsByAYK8zpKlk0URvC3T50ozDkNp69rw"
   on:
     branch: master
