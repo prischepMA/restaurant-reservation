@@ -1,0 +1,109 @@
+.page-container {
+  .title-image {
+    position: relative;
+
+    .image {
+      background-image: url(https://resizer.otstatic.com/v2/photos/wide-huge/3/28326270.jpg);
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      height: 306px;
+    }
+
+    ::ng-deep button fa-icon {
+      margin-right: 5px;
+    }
+
+    .save-restaurant {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: 2px solid white;
+
+      &:hover {
+        border: 2px solid #da3743;
+        color: rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+  .content {
+    .header {
+      .top {
+        height: 100px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e7e7ed;
+        display: grid;
+        grid-template-columns: 180px auto;
+ 
+        .logo-container {
+          position: relative;
+          .logo {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            position: absolute;
+            top: -60px;
+            left: 15px;
+            img {
+              height: 130px;
+              width: 130px;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .right-part {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .title-subtitle {
+            .title {
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+          }
+
+          .share-button-container {
+            margin-right: 10px;
+            ::ng-deep button fa-icon {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      .bottom {
+        height: 70px;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+          }
+          
+          li {
+            float: left;
+          }
+          
+          li {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin: 5px 10px;
+          }
+          
+          li:hover {
+            color: #da3743;
+            cursor: pointer;
+          }
+      }
+    }
+  }
+}

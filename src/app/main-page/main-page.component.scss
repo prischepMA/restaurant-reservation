@@ -55,6 +55,9 @@
               background-color: #da3743;
               border: none;
             }
+            ::ng-deep button fa-icon {
+              margin-left: 5px;
+            }
           }
         }
       }
