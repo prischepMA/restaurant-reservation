@@ -14,26 +14,17 @@ import {
   ru_RU,
   NzTimePickerModule,
   NzInputNumberModule,
-  NzSelectModule,
-  NzMenuModule
+  NzSelectModule
 } from 'ng-zorro-antd';
 import { MainPageComponent } from './main-page/main-page.component';
-import { NzIconModule } from 'ng-zorro-antd/icon';
 import { registerLocaleData } from '@angular/common';
 import ru from '@angular/common/locales/ru';
 import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(ru);
-import { IconDefinition } from '@ant-design/icons-angular';
-import { NZ_ICONS } from 'ng-zorro-antd';
-import * as AllIcons from '@ant-design/icons-angular/icons';
-import { RestaurantsListComponent } from './restaurants/restaurants-list/restaurants-list.component';
-import { RestaurantProfileComponent } from './restaurants/restaurant-profile/restaurant-profile.component';
 import { RestaurantsModule } from './restaurants/restaurants.module';
-
-const antDesignIcons = AllIcons as {
-  [key: string]: IconDefinition;
-};
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key]);
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faList, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
 
 @NgModule({
   declarations: [
@@ -47,20 +38,23 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NzDatePickerModule,
     NzTimePickerModule,
     NzInputNumberModule,
-    NzIconModule,
     NzSelectModule,
     HttpClientModule,
-    NzMenuModule,
     AppRoutingModule,
     RestaurantsModule,
     StoreModule.forRoot({}),
+    FontAwesomeModule,
     StoreDevtoolsModule.instrument({
       name: 'App Devtools',
       maxAge: 25,
       logOnly: environment.production
     })
   ],
-  providers: [{ provide: NZ_I18N, useValue: ru_RU }, { provide: NZ_ICONS, useValue: icons }],
+  providers: [{ provide: NZ_I18N, useValue: ru_RU }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private library: FaIconLibrary) {
+    library.addIcons(faList, faNewspaper, faSearch);
+  }
+}

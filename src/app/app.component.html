@@ -6,12 +6,12 @@
   </div>
   <div id="sing-in-up-container">
     <div class="menu">
-      <a routerLink="/restaurants"><i nz-icon nzType="unordered-list" nzTheme="outline"></i>Каталог заведений</a>
-      <a><i nz-icon nzType="appstore" nzTheme="outline"></i>Новости</a>        
+      <a routerLink="/restaurants"><fa-icon [icon]="['fas', 'list']"></fa-icon>Каталог заведений</a>
+      <a><fa-icon [icon]="['far', 'newspaper']"></fa-icon>Новости</a>        
     </div>
     <!-- <button nz-button nzType="primary" style="background-color: #237b98; -->
     <!-- border-color: #1c627a;">Зарегестрироваться</button> -->
-    <button nz-button nzType="default">Войти</button>
+    <button nz-button nzType="default" class="simple-button">Войти</button>
   </div>
 </div>
 <router-outlet></router-outlet>

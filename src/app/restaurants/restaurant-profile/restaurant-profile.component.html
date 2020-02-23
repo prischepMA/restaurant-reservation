@@ -1,3 +1,61 @@
-<p>
-  restaurant-profile works!
-</p>
+<div class="page-container">
+  <div class="title-image">
+    <div class="image">
+    </div>
+    <button nz-button [nzSize]="'large'" class="save-restaurant" nzType="default">
+      <fa-icon [icon]="['far', 'bookmark']"></fa-icon>Сохранить ресторан</button>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="top">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="https://koko.by/wp-content/uploads/2020/01/Screenshot_1-3-150x150.jpg">
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="title-subtitle">
+            <div class="title">Дуть</div>
+            <div class="subtitle">Лаунж-бар на Якуба Коласа</div>
+          </div>
+          <div class="share-button-container">
+            <button nz-button [nzSize]="'large'" class="simple-button" nzType="default">
+              <fa-icon [icon]="['fas', 'share']"></fa-icon>Поделиться</button>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="menu-comtainer">
+          <ul>
+            <li>
+              <fa-icon [icon]="['fas', 'home']"></fa-icon>
+              Главная
+            </li>
+            <!-- <li>
+              <fa-icon [icon]="['far', 'list-alt']"></fa-icon>
+              Описание
+            </li> -->
+            <li>
+              <fa-icon [icon]="['far', 'images']"></fa-icon>
+              Галерея
+            </li>
+            <li>
+              <fa-icon [icon]="['fas', 'book-open']"></fa-icon>
+              Меню
+            </li>
+            <li>
+              <fa-icon [icon]="['far', 'newspaper']"></fa-icon>
+              Новости
+            </li>
+            <li>
+              <fa-icon [icon]="['far', 'comment-dots']"></fa-icon>
+              Отзывы
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
