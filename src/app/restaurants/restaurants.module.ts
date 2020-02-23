@@ -5,10 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { RestaurantsListComponent } from './restaurants-list/restaurants-list.component';
 import { RestaurantProfileComponent } from './restaurant-profile/restaurant-profile.component';
 import { RestaurantsRoutingModule } from './restaurants-routing.module';
-import { NzButtonModule } from 'ng-zorro-antd';
+import { NzButtonModule, NzProgressModule } from 'ng-zorro-antd';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBookmark, faListAlt, faImages, faNewspaper, faCommentDots } from '@fortawesome/free-regular-svg-icons';
-import { faShare, faHome, faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBookmark, faListAlt, faImages, faNewspaper, faCommentDots, faCreditCard, faStar,
+    faThumbsUp
+} from '@fortawesome/free-regular-svg-icons';
+import {
+    faShare, faHome, faBookOpen, faTags, faParking, faMusic, faBusinessTime,
+    faStar as fasStar
+} from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
     imports: [
@@ -16,7 +22,8 @@ import { faShare, faHome, faBookOpen } from '@fortawesome/free-solid-svg-icons';
         FormsModule,
         RestaurantsRoutingModule,
         NzButtonModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        NzProgressModule
     ],
     declarations: [
         RestaurantProfileComponent,
@@ -25,6 +32,21 @@ import { faShare, faHome, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 })
 export class RestaurantsModule {
     constructor(private library: FaIconLibrary) {
-        library.addIcons(faBookmark, faShare, faHome, faListAlt, faImages, faBookOpen, faNewspaper, faCommentDots);
+        library.addIcons(faBookmark,
+            faShare,
+            faHome,
+            faListAlt,
+            faImages,
+            faBookOpen,
+            faNewspaper,
+            faCommentDots,
+            faTags,
+            faCreditCard,
+            faParking,
+            faMusic,
+            faBusinessTime,
+            faStar,
+            fasStar,
+            faThumbsUp);
     }
 }
