@@ -3,38 +3,36 @@
     <div class="image">
     </div>
     <button nz-button [nzSize]="'large'" class="save-restaurant" nzType="default">
-      <fa-icon [icon]="['far', 'bookmark']"></fa-icon>Сохранить ресторан</button>
+      <fa-icon [icon]="['far', 'bookmark']"></fa-icon>Сохранить ресторан
+    </button>
   </div>
   <div class="content">
-    <div class="header">
-      <div class="top">
+    <div class="header-container">
+      <div class="top-container">
         <div class="logo-container">
           <div class="logo">
-            <img src="https://koko.by/wp-content/uploads/2020/01/Screenshot_1-3-150x150.jpg">
+            <img src="https://koko.by/wp-content/uploads/2020/02/загружено-150x150.png">
           </div>
         </div>
         <div class="right-part">
           <div class="title-subtitle">
-            <div class="title">Дуть</div>
-            <div class="subtitle">Лаунж-бар на Якуба Коласа</div>
+            <div class="title">Home & you</div>
+            <div class="subtitle">Кафе для всей семьи</div>
           </div>
           <div class="share-button-container">
             <button nz-button [nzSize]="'large'" class="simple-button" nzType="default">
-              <fa-icon [icon]="['fas', 'share']"></fa-icon>Поделиться</button>
+              <fa-icon [icon]="['fas', 'share']"></fa-icon>Поделиться
+            </button>
           </div>
         </div>
       </div>
-      <div class="bottom">
+      <div class="bottom-container">
         <div class="menu-comtainer">
           <ul>
             <li>
               <fa-icon [icon]="['fas', 'home']"></fa-icon>
               Главная
             </li>
-            <!-- <li>
-              <fa-icon [icon]="['far', 'list-alt']"></fa-icon>
-              Описание
-            </li> -->
             <li>
               <fa-icon [icon]="['far', 'images']"></fa-icon>
               Галерея
@@ -54,8 +52,112 @@
           </ul>
         </div>
       </div>
-
     </div>
+    <div class="body-container">
+      <div class="left-column">
+        <div class="block description">
+          <div class="title">
+            <fa-icon [icon]="['far', 'list-alt']"></fa-icon>
+            Описание
+          </div>
+          <div class="body">
+            Некоторое описание заведения
+          </div>
+        </div>
 
+        <div class="block features">
+          <div class="title">
+            <fa-icon [icon]="['fas', 'tags']"></fa-icon>
+            Особенности
+          </div>
+          <div class="body">
+            <div class="item">
+              <fa-icon [icon]="['far', 'credit-card']"></fa-icon>Оплата картой
+            </div>
+            <div class="item">
+              <fa-icon [icon]="['fas', 'parking']"></fa-icon>Парковка
+            </div>
+            <div class="item">
+              <fa-icon [icon]="['fas', 'music']"></fa-icon>Музыка
+            </div>
+            <div class="item">
+              <fa-icon [icon]="['fas', 'business-time']"></fa-icon>Бизнес ланчи
+            </div>
+          </div>
+        </div>
+
+        <div class="block photos">
+          <div class="title">
+            <fa-icon [icon]="['far', 'images']"></fa-icon>
+            Фото
+          </div>
+          <div class="body">
+
+          </div>
+          <div class="footer">
+            Смотреть ещё
+          </div>
+        </div>
+
+        <div class="block rating">
+          <div class="title">
+            <fa-icon [icon]="['far', 'star']"></fa-icon>
+            Рейтинг
+          </div>
+          <div class="body">
+            <div class="left-part">
+              <div class="stars-container">
+                <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                <fa-icon [icon]="['far', 'star']"></fa-icon>
+                <b>4.0</b> На основании последних рейтингов
+              </div>
+              <div class="marks-container">
+                <div class="food">
+                  <b>4.8</b>
+                  <br>
+                  Еда
+                </div>
+                <div class="service">
+                  <b>4.6</b>
+                  <br>
+                  Обслуживание
+                </div>
+                <div class="ambience">
+                  <b>4.4</b>
+                  <br>
+                  Атмосфера
+                </div>
+                <div class="value">
+                  <b>4.5</b>
+                  <br>
+                  Стоимость
+                </div>
+              </div>
+              <div class="recommendations-container">
+                <fa-icon [icon]="['far', 'thumbs-up']"></fa-icon>
+                <b>94% людей</b> будут рекомендовать заведение друзьям
+              </div>
+            </div>
+            <div class="right-part">
+              <div class="item"><div>1</div><nz-progress [nzPercent]="60" [nzShowInfo]="false"></nz-progress>
+              </div>
+              <div class="item"><div>2</div><nz-progress [nzPercent]="40" [nzShowInfo]="false"></nz-progress>
+              </div>
+              <div class="item"><div>3</div><nz-progress [nzPercent]="00" [nzShowInfo]="false"></nz-progress>
+              </div>
+              <div class="item"><div>4</div><nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
+              </div>
+              <div class="item"><div>5</div><nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+      </div>
+    </div>
   </div>
 </div>

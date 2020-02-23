@@ -27,14 +27,14 @@
     }
   }
   .content {
-    .header {
-      .top {
+    .header-container {
+      .top-container {
         height: 100px;
         padding-bottom: 15px;
         border-bottom: 1px solid #e7e7ed;
         display: grid;
         grid-template-columns: 180px auto;
- 
+
         .logo-container {
           position: relative;
           .logo {
@@ -78,32 +78,135 @@
         }
       }
 
-      .bottom {
+      .bottom-container {
         height: 70px;
         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-          }
-          
-          li {
-            float: left;
-          }
-          
-          li {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            margin: 5px 10px;
-          }
-          
-          li:hover {
-            color: #da3743;
-            cursor: pointer;
-          }
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        li {
+          float: left;
+        }
+
+        li {
+          display: block;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          margin: 5px 10px;
+        }
+
+        li:hover {
+          color: #da3743;
+          cursor: pointer;
+        }
       }
+    }
+
+    .body-container {
+      height: auto;
+      background-color: #f3f3f6;
+
+      .block {
+        background-color: white;
+        width: 55%;
+        margin-bottom: 15px;
+
+        .title,
+        .body {
+          padding: 8px 10px;
+        }
+
+        .title {
+          border-bottom: 1px solid #e7e7ed;
+        }
+      }
+
+      .left-column {
+        padding: 10px;
+
+        .features .body {
+          display: flex;
+          flex-wrap: wrap;
+          height: auto;
+          .item {
+            width: 30%;
+            margin: 5px;
+
+            fa-icon {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .photos {
+          .body {
+            height: 200px;
+          }
+
+          .footer {
+            border-top: 1px solid #e7e7ed;
+            padding: 15px 0;
+            text-align: center;
+
+            &:hover {
+              color: #da3743;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .rating {
+          .body {
+            display: flex;
+            flex-wrap: wrap;
+            .left-part {
+              padding: 10px;
+              .marks-container {
+                display: flex;
+                text-align: center;
+                div {
+                  padding: 5px;
+                }
+
+                .food,
+                .service,
+                .ambience {
+                  border-right: 1px solid #e7e7ed;
+                }
+              }
+
+              & > div {
+                margin: 15px 0;
+              }
+
+              .stars-container fa-icon {
+                color: #da3743;
+              }
+            }
+
+            .right-part {
+              padding: 10px;
+              width: 50%;
+              .item {
+                display: grid;
+                grid-template-columns: 15px auto;
+                margin: 10px 0;
+
+                ::ng-deep .ant-progress-bg {
+                  background-color: #da3743;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // .right-column {
+      // }
     }
   }
 }
