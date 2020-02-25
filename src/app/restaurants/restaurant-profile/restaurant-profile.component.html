@@ -3,7 +3,7 @@
     <div class="image">
     </div>
     <button nz-button [nzSize]="'large'" class="save-restaurant" nzType="default">
-      <fa-icon [icon]="['far', 'bookmark']"></fa-icon>Сохранить ресторан
+      <fa-icon [icon]="['far', 'heart']"></fa-icon>Добавить в избранное
     </button>
   </div>
   <div class="content">
@@ -157,6 +157,95 @@
         </div>
       </div>
       <div class="right-column">
+        <div class="block working-hours">
+          <div class="title">
+            <fa-icon [icon]="['far', 'clock']"></fa-icon>
+            Время работы
+          </div>
+          <div class="body">
+            <div class="day">
+              <div>Понедельник</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Вторник</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Среда</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Четверг</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Пятница</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Суббота</div>
+              <div>10:00-23:00</div>
+            </div>
+            <div class="day">
+              <div>Воскресенье</div>
+              <div>10:00-23:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="block average-check">
+          <div class="title">
+            <fa-icon [icon]="['fas', 'coins']"></fa-icon>
+            Средний чек на человека
+          </div>
+          <div class="body">
+            <div>
+              15<fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon> - 20<fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon>
+            </div>
+          </div>
+        </div>
+        <div class="block information">
+          <div class="title">
+            <fa-icon [icon]="['fas', 'info']"></fa-icon>
+            Информация
+          </div>
+          <div class="body">
+            <div>
+              <fa-icon [icon]="['fas', 'phone-alt']"></fa-icon>+375(29) 134-07-07
+            </div>
+            <div>
+              <fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>улица Якуба Коласа 7а, Беловежский, Беларусь
+            </div>
+          </div>
+        </div>
+        <div class="block statistics">
+          <div class="title">
+            <fa-icon [icon]="['far', 'chart-bar']"></fa-icon>
+            Статискика
+          </div>
+          <div class="body">
+            <div>
+              <fa-icon [icon]="['far', 'eye']"></fa-icon> 707 Просмотров
+            </div>
+            <div>
+              <fa-icon [icon]="['far', 'heart']"></fa-icon> 15 В избранном
+            </div>
+            <div>
+              <fa-icon [icon]="['far', 'share-square']"></fa-icon> 55 Бронирований
+            </div>
+          </div>
+        </div>
+        <div class="block map">
+          <div class="title">
+            <fa-icon [icon]="['fas', 'map-marked-alt']"></fa-icon>
+            Расположение
+          </div>
+          <div class="body">
+            <div>
+              Карта
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
