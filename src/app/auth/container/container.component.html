@@ -1,0 +1,28 @@
+<div class="page-container">
+  <div class="page-content">
+    <div class="logo">
+      <a routerLink="">
+        <img src="../assets/logo.svg">
+      </a>
+    </div>
+    
+    <router-outlet></router-outlet>
+    <div class="social-networks-login-container">
+      <div class="answer">
+        Не желаете заполнять форму?
+      </div>
+      <div class="google">
+        <button nz-button nzType="default" [nzSize]="'large'"><img src="../../../assets/icons/icons8-google.svg">Продолжить с Google</button>
+      </div>
+      <div class="facebook">
+        <button nz-button nzType="default" [nzSize]="'large'"><img src="../../../assets/icons/icons8-facebook.svg">Продолжить с Facebook</button>
+      </div>
+      <div class="twitter">
+        <button nz-button nzType="default" [nzSize]="'large'"><img src="../../../assets/icons/icons8-twitter.svg">Продолжить с Twitter</button>
+      </div>
+      <div class="create-account">
+        Впервые на OpenTable?<a>Создать аккаунт</a>
+      </div>
+    </div>
+  </div>
+</div>

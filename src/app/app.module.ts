@@ -25,6 +25,7 @@ import { RestaurantsModule } from './restaurants/restaurants.module';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faList, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
     RestaurantsModule,
     StoreModule.forRoot({}),
     FontAwesomeModule,
+    AuthModule,
     StoreDevtoolsModule.instrument({
       name: 'App Devtools',
       maxAge: 25,

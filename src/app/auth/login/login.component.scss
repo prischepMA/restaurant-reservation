@@ -1,0 +1,25 @@
+.login-container {
+  padding: 45px 80px;
+
+  div {
+    margin: 10px 0;
+  }
+
+  .forgot-password {
+    text-align: end;
+  }
+
+  .login-button {
+    button {
+      width: 100%;
+      background-color: #da3743;
+      border: none;
+    }
+  }
+
+  .password {
+    fa-icon {
+      cursor: pointer;
+    }
+  }
+}
