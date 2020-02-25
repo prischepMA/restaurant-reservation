@@ -109,10 +109,11 @@
     .body-container {
       height: auto;
       background-color: #f3f3f6;
+      display: flex;
+      flex-wrap: wrap;
 
       .block {
         background-color: white;
-        width: 55%;
         margin-bottom: 15px;
 
         .title,
@@ -126,8 +127,8 @@
       }
 
       .left-column {
-        padding: 10px;
-
+        padding: 15px;
+        flex-basis: 60%;
         .features .body {
           display: flex;
           flex-wrap: wrap;
@@ -205,8 +206,71 @@
         }
       }
 
-      // .right-column {
-      // }
+      .right-column {
+        padding: 15px;
+        flex-basis: 40%;
+
+        .working-hours {
+          .title {
+            background-color: #da3743;
+            color: white;
+          }
+
+          .body {
+            .day {
+              display: flex;
+              justify-content: space-between;
+              padding: 5px 7px;
+            }
+          }
+        }
+
+        .average-check {
+          .body {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+          }
+        }
+
+        .information {
+          .body {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+
+            div {
+              padding: 15px;
+              fa-icon {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .statistics {
+          .body {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 16px;
+
+            div {
+              padding: 10px;
+            }
+          }
+        }
+
+        .map {
+
+          .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160px;
+          }
+        }
+      }
     }
   }
 }

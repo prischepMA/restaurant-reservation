@@ -9,11 +9,11 @@ import { NzButtonModule, NzProgressModule } from 'ng-zorro-antd';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
     faBookmark, faListAlt, faImages, faNewspaper, faCommentDots, faCreditCard, faStar,
-    faThumbsUp
+    faThumbsUp, faClock, faChartBar, faEye, faHeart, faShareSquare
 } from '@fortawesome/free-regular-svg-icons';
 import {
     faShare, faHome, faBookOpen, faTags, faParking, faMusic, faBusinessTime,
-    faStar as fasStar
+    faStar as fasStar, faCoins, faDollarSign, faInfo, faPhoneAlt, faMapMarkerAlt, faMapMarkedAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
@@ -47,6 +47,17 @@ export class RestaurantsModule {
             faBusinessTime,
             faStar,
             fasStar,
-            faThumbsUp);
+            faThumbsUp,
+            faClock,
+            faCoins,
+            faDollarSign,
+            faInfo,
+            faPhoneAlt,
+            faMapMarkerAlt,
+            faChartBar,
+            faEye,
+            faHeart,
+            faShareSquare,
+            faMapMarkedAlt);
     }
 }
