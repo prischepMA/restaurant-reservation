@@ -1,3 +1,21 @@
-<p>
-  register works!
-</p>
+<div class="register-container">
+  <div class="field">
+    <input nz-input placeholder="Имя*" nzSize="large" />
+  </div>
+  <div class="field">
+    <input nz-input placeholder="Фамилия*" nzSize="large" />
+  </div>
+  <div class="field">
+    <input nz-input placeholder="Электронный адрес*" nzSize="large" />
+  </div>
+
+  <div class="field">
+    <input [type]="'password'" nz-input placeholder="Пароль*" nzSize="large" />
+  </div>
+  <div class="field">
+    <input [type]="'password'" nz-input placeholder="Повторить пароль*" nzSize="large" />
+  </div>
+  <div class="register-button">
+    <button nz-button nzType="primary" [nzSize]="'large'">Зарегистрироваться</button>
+  </div>
+</div>

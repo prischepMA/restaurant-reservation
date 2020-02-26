@@ -15,7 +15,8 @@
     width: 600px;
     background-color: #ffffff;
     display: flex;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     flex-direction: column;
     .logo {
       display: flex;
