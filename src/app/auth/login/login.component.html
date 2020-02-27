@@ -1,0 +1,21 @@
+<div class="login-container">
+  <div class="email">
+    <input nz-input placeholder="Электронная почта" nzSize="large" />
+  </div>
+  <div class="password">
+    <nz-input-group [nzSuffix]="suffixTemplate" nzSize="large">
+      <input [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="Пароль" />
+    </nz-input-group>
+    <ng-template #suffixTemplate>
+      <fa-icon [icon]="['far', 'eye']" (click)="passwordVisible = !passwordVisible"></fa-icon>
+    </ng-template>
+  </div>
+  <div class="forgot-password">
+    <a>
+      Забыли пароль?
+    </a>
+  </div>
+  <div class="login-button">
+    <button nz-button nzType="primary" [nzSize]="'large'">Войти</button>
+  </div>
+</div>

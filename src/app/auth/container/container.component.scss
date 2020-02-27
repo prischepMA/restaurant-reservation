@@ -1,0 +1,51 @@
+.page-container::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("https://cdn.hipwallpaper.com/i/33/18/ly1z8B.jpg") center / cover no-repeat;
+  filter: blur(5px);
+}
+.page-container {
+  .page-content {
+    position: absolute;
+    width: 600px;
+    background-color: #ffffff;
+    display: flex;
+    min-height: 100%;
+    height: auto;
+    flex-direction: column;
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin: 40px 25px;
+      border-bottom: 1px solid #e7e7ed;
+    }
+
+    .social-networks-login-container {
+      margin: 20px 25px;
+      border-top: 1px solid #e7e7ed;
+      padding: 15px 80px;
+
+      div {
+        margin: 10px 0;
+      }
+      button {
+        width: 100%;
+        ::ng-deep span img {
+          height: 32px;
+          width: 32px;
+          margin-right: 5px;
+        }
+      }
+      .create-account {
+        a {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
