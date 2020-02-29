@@ -27,6 +27,7 @@ import { faList, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import { AuthModule } from './auth/auth.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,10 @@ import { UserProfileModule } from './user-profile/user-profile.module';
     AppRoutingModule,
     RestaurantsModule,
     UserProfileModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      router: routerReducer,
+    }),
+    StoreRouterConnectingModule.forRoot(),
     FontAwesomeModule,
     AuthModule,
     StoreDevtoolsModule.instrument({

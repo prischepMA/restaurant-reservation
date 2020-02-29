@@ -1,4 +1,4 @@
-<!-- <div id="header">
+<div id="header" *ngIf="showHeaderFooter$ | async">
   <div id="logo" routerLink="/">
     <a>
       <img src="../assets/logo.svg">
@@ -10,11 +10,11 @@
       <a><fa-icon [icon]="['far', 'newspaper']"></fa-icon>Новости</a>        
     </div>
 
-    <button nz-button nzType="default" class="simple-button">Войти</button>
+    <button nz-button nzType="default" class="simple-button" (click)="navigateToLoginPage()">Войти</button>
   </div>
-</div> -->
+</div>
 <router-outlet></router-outlet>
-<!-- <div id="footer"></div> -->
+<div id="footer" *ngIf="showHeaderFooter$ | async"></div>
 
     <!-- <button nz-button nzType="primary" style="background-color: #237b98; -->
     <!-- border-color: #1c627a;">Зарегестрироваться</button> -->
