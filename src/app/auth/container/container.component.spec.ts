@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ContainerComponent } from './container.component';
+import { FirebaseAuthService } from '../../services/firebase/firebase-auth.service';
 
 describe('ContainerComponent', () => {
   let component: ContainerComponent;
@@ -11,9 +12,10 @@ describe('ContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContainerComponent ]
+      declarations: [ContainerComponent],
+      providers: [{ provide: FirebaseAuthService, useValue: {} }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

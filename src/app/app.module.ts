@@ -27,6 +27,11 @@ import { faList, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import { AuthModule } from './auth/auth.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FirebaseAuthService } from './services/firebase/firebase-auth.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,13 @@ import { UserProfileModule } from './user-profile/user-profile.module';
     AppRoutingModule,
     RestaurantsModule,
     UserProfileModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      router: routerReducer,
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    StoreRouterConnectingModule.forRoot(),
     FontAwesomeModule,
     AuthModule,
     StoreDevtoolsModule.instrument({
@@ -54,7 +65,7 @@ import { UserProfileModule } from './user-profile/user-profile.module';
       logOnly: environment.production
     })
   ],
-  providers: [{ provide: NZ_I18N, useValue: ru_RU }],
+  providers: [{ provide: NZ_I18N, useValue: ru_RU }, FirebaseAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
