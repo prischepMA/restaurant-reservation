@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseAuthService } from '../../services/firebase/firebase-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,12 @@ export class LoginComponent implements OnInit {
 
   passwordVisible = false;
 
-  constructor() { }
+  constructor(private firebaseAuthService: FirebaseAuthService) { }
 
   ngOnInit() {
   }
 
+  signIn() {
+    this.firebaseAuthService.signIn('ya.pryshchep@yandex.by', '123456789');
+  }
 }

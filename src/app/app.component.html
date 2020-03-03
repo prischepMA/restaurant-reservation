@@ -10,7 +10,8 @@
       <a><fa-icon [icon]="['far', 'newspaper']"></fa-icon>Новости</a>        
     </div>
 
-    <button nz-button nzType="default" class="simple-button" (click)="navigateToLoginPage()">Войти</button>
+    <button nz-button nzType="default" class="simple-button" (click)="navigateToLoginPage()" *ngIf="!isLoggedIn()">Войти</button>
+    <button nz-button nzType="default" class="simple-button" (click)="logout()" *ngIf=isLoggedIn()>Выйти</button>
   </div>
 </div>
 <router-outlet></router-outlet>
