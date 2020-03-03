@@ -28,8 +28,8 @@ import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
 import { AuthModule } from './auth/auth.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
-import { AngularFireModule } from "@angular/fire";
-import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseAuthService } from './services/firebase/firebase-auth.service';
 
