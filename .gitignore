@@ -9,6 +9,12 @@
 
 # dependencies
 /node_modules
+/functions/node_modules
+/functions/**/*.js
+/functions/**/*.js.map
+
+# Typescript v1 declaration files
+/functions/typings/
 
 # profiling files
 chrome-profiler-events*.json

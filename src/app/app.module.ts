@@ -32,6 +32,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseAuthService } from './services/firebase/firebase-auth.service';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { FirebaseAuthService } from './services/firebase/firebase-auth.service';
       name: 'App Devtools',
       maxAge: 25,
       logOnly: environment.production
-    })
+    }),
+    AgmCoreModule.forRoot()
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }, FirebaseAuthService],
   bootstrap: [AppComponent]

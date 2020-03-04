@@ -15,6 +15,7 @@ import {
     faShare, faHome, faBookOpen, faTags, faParking, faMusic, faBusinessTime,
     faStar as fasStar, faCoins, faDollarSign, faInfo, faPhoneAlt, faMapMarkerAlt, faMapMarkedAlt
 } from '@fortawesome/free-solid-svg-icons';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import {
         RestaurantsRoutingModule,
         NzButtonModule,
         FontAwesomeModule,
-        NzProgressModule
+        NzProgressModule,
+        AgmCoreModule
     ],
     declarations: [
         RestaurantProfileComponent,
