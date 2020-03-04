@@ -142,15 +142,25 @@
               </div>
             </div>
             <div class="right-part">
-              <div class="item"><div>5</div><nz-progress [nzPercent]="60" [nzShowInfo]="false"></nz-progress>
+              <div class="item">
+                <div>5</div>
+                <nz-progress [nzPercent]="60" [nzShowInfo]="false"></nz-progress>
               </div>
-              <div class="item"><div>4</div><nz-progress [nzPercent]="40" [nzShowInfo]="false"></nz-progress>
+              <div class="item">
+                <div>4</div>
+                <nz-progress [nzPercent]="40" [nzShowInfo]="false"></nz-progress>
               </div>
-              <div class="item"><div>3</div><nz-progress [nzPercent]="00" [nzShowInfo]="false"></nz-progress>
+              <div class="item">
+                <div>3</div>
+                <nz-progress [nzPercent]="00" [nzShowInfo]="false"></nz-progress>
               </div>
-              <div class="item"><div>2</div><nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
+              <div class="item">
+                <div>2</div>
+                <nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
               </div>
-              <div class="item"><div>1</div><nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
+              <div class="item">
+                <div>1</div>
+                <nz-progress [nzPercent]="0" [nzShowInfo]="false"></nz-progress>
               </div>
             </div>
           </div>
@@ -200,7 +210,8 @@
           </div>
           <div class="body">
             <div>
-              15<fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon> - 20<fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon>
+              15<fa-icon [icon]="['fas', 'dollar-sign']"></fa-icon> - 20<fa-icon [icon]="['fas', 'dollar-sign']">
+              </fa-icon>
             </div>
           </div>
         </div>
@@ -241,9 +252,7 @@
             Расположение
           </div>
           <div class="body">
-            <div>
-              Карта
-            </div>
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"></agm-map>
           </div>
         </div>
       </div>
