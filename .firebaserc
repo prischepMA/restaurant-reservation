@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "restaurant-booking-d701d"
+    "default": "restaurant-booking-d701d",
+    "rb": "restaurant-booking-d701d"
   },
   "targets": {
     "restaurant-booking-d701d": {
