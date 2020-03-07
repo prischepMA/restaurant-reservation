@@ -1,21 +1,42 @@
 <div class="login-container">
-  <div class="email">
-    <input nz-input placeholder="Электронная почта" nzSize="large" />
-  </div>
-  <div class="password">
-    <nz-input-group [nzSuffix]="suffixTemplate" nzSize="large">
-      <input [type]="passwordVisible ? 'text' : 'password'" nz-input placeholder="Пароль" />
-    </nz-input-group>
-    <ng-template #suffixTemplate>
-      <fa-icon [icon]="['far', 'eye']" (click)="passwordVisible = !passwordVisible"></fa-icon>
-    </ng-template>
-  </div>
-  <div class="forgot-password">
-    <a>
-      Забыли пароль?
-    </a>
-  </div>
-  <div class="login-button">
-    <button nz-button nzType="primary" [nzSize]="'large'" (click)="signIn()">Войти</button>
-  </div>
+  <form nz-form [formGroup]="loginForm" (ngSubmit)="signIn()">
+    <div class="email error-message">
+      <input type="text" [ngClass]="{'has-error': loginForm.get('email').touched && loginForm.get('email').invalid}" nz-input formControlName="email" placeholder="Электронная почта" nzSize="large" />
+      <div *ngIf="loginForm.get('email').valid else emailErrorTpl">
+      </div>
+      <ng-template  #emailErrorTpl>
+        <ng-container *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('email')">
+          Пожалуйста введите корректный адрес электронной почты!
+        </ng-container>
+        <ng-container *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('required')">
+          Пожалуйста введите адрес электронной почты!
+        </ng-container>
+      </ng-template>
+    </div>
+    <div class="password error-message">
+      <nz-input-group [nzSuffix]="suffixTemplate" nzSize="large">
+        <input [ngClass]="{'has-error': loginForm.get('password').touched && loginForm.get('password').invalid}" [type]="passwordVisible ? 'text' : 'password'" nz-input formControlName="password"
+          placeholder="Пароль" />
+          <ng-template #suffixTemplate>
+            <fa-icon [icon]="['far', 'eye']" (click)="passwordVisible = !passwordVisible"></fa-icon>
+          </ng-template>
+      </nz-input-group>
+      <div *ngIf="loginForm.get('password').valid else passwordErrorTpl">
+      </div>
+      <ng-template #passwordErrorTpl>
+        <ng-container *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')">
+          Пожалуйста введите пароль!
+        </ng-container>
+      </ng-template>
+    </div>
+    <div class="forgot-password">
+      <a>
+        Забыли пароль?
+      </a>
+    </div>
+    <div class="login-button">
+      <button nz-button nzType="primary" [nzSize]="'large'">Войти</button>
+    </div>
+  </form>
+  <div class="login-error" *ngIf="loginError">Неверные логин или пароль!</div>
 </div>

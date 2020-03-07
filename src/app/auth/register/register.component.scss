@@ -1,9 +1,32 @@
-.register-container {
+.container {
   margin: 45px 0;
   padding: 0 80px;
 
+  .registration-successed {
+    text-align: center;
+    font-size: 16px;
+  }
+
   .field {
     margin: 10px 0;
+  }
+
+  .register-error {
+    text-align: center;
+    color: #da3743;
+  }
+
+  .has-error {
+    border-color: #da3743;
+    &:focus {
+      border-right-width: 1px !important;
+      outline: 0;
+      box-shadow: 0 0 0 2px #edb4b9;
+    }
+  }
+
+  .error-message {
+    color: #da3743;
   }
 
   .register-button {

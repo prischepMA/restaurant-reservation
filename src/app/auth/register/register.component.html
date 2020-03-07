@@ -1,21 +1,73 @@
-<div class="register-container">
-  <div class="field">
-    <input nz-input placeholder="Имя*" nzSize="large" />
+<div class="container">
+  <div *ngIf="registrationSuccessed" class="registration-successed">
+    Регистрация прошла успешно!
+    Для подтверждения адреса электронной почты на <b>{{registrationForm.get('email').value}}</b> выслано сообщение!
   </div>
-  <div class="field">
-    <input nz-input placeholder="Фамилия*" nzSize="large" />
-  </div>
-  <div class="field">
-    <input nz-input placeholder="Электронный адрес*" nzSize="large" />
-  </div>
-
-  <div class="field">
-    <input [type]="'password'" nz-input placeholder="Пароль*" nzSize="large" />
-  </div>
-  <div class="field">
-    <input [type]="'password'" nz-input placeholder="Повторить пароль*" nzSize="large" />
-  </div>
-  <div class="register-button">
-    <button nz-button nzType="primary" [nzSize]="'large'" (click)="signUp()">Зарегистрироваться</button>
+  <div *ngIf="!registrationSuccessed">
+    <form nz-form [formGroup]="registrationForm" (ngSubmit)="signUp()">
+      <div class="field error-message">
+        <input [ngClass]="{'has-error': registrationForm.get('firstName').touched && registrationForm.get('firstName').invalid}" nz-input placeholder="Имя*" formControlName="firstName" nzSize="large" />
+        <div *ngIf="registrationForm.get('firstName').valid else firstNameErrorTpl">
+        </div>
+        <ng-template  #firstNameErrorTpl>
+          <ng-container *ngIf="registrationForm.get('firstName').touched && registrationForm.get('firstName').hasError('required')">
+            Пожалуйста введите Ваше имя!
+          </ng-container>
+        </ng-template>
+      </div>
+      <div class="field error-message">
+        <input [ngClass]="{'has-error': registrationForm.get('lastName').touched && registrationForm.get('lastName').invalid}" nz-input placeholder="Фамилия*" formControlName="lastName" nzSize="large" />
+        <div *ngIf="registrationForm.get('lastName').valid else lastNameErrorTpl">
+        </div>
+        <ng-template  #lastNameErrorTpl>
+          <ng-container *ngIf="registrationForm.get('lastName').touched && registrationForm.get('lastName').hasError('required')">
+            Пожалуйста введите Вашу фаимлию!
+          </ng-container>
+        </ng-template>
+      </div>
+      <div class="field error-message">
+        <input [ngClass]="{'has-error': registrationForm.get('email').touched && registrationForm.get('email').invalid}" nz-input placeholder="Электронный адрес*" formControlName="email" nzSize="large" />
+        <div *ngIf="registrationForm.get('email').valid else emailErrorTpl">
+        </div>
+        <ng-template  #emailErrorTpl>
+          <ng-container *ngIf="registrationForm.get('email').touched && registrationForm.get('email').hasError('email')">
+            Пожалуйста введите корректный адрес электронной почты!
+          </ng-container>
+          <ng-container *ngIf="registrationForm.get('email').touched && registrationForm.get('email').hasError('required')">
+            Пожалуйста введите адрес электронной почты!
+          </ng-container>
+        </ng-template>
+      </div>
+      <div class="field error-message">
+        <input [ngClass]="{'has-error': registrationForm.get('password').touched && registrationForm.get('password').invalid}" [type]="'password'" nz-input placeholder="Пароль*" formControlName="password" nzSize="large" />
+        <div *ngIf="registrationForm.get('password').valid else passwordErrorTpl">
+        </div>
+        <ng-template  #passwordErrorTpl>
+          <ng-container *ngIf="registrationForm.get('password').touched && registrationForm.get('password').errors.minlength">
+            Пожалуйста введите корректный пароль (минимальныа длина пароля &#8211; 8 символов)!
+          </ng-container>
+          <ng-container *ngIf="registrationForm.get('password').touched && registrationForm.get('password').hasError('required')">
+            Пожалуйста введите пароль!
+          </ng-container>
+        </ng-template>
+      </div>
+      <div class="field error-message">
+        <input [ngClass]="{'has-error': registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').invalid && !registrationForm.errors?.notSame}" [type]="'password'" nz-input placeholder="Повторить пароль*" formControlName="confirmPassword" nzSize="large" />
+        <div *ngIf="registrationForm.get('confirmPassword').valid && !registrationForm.errors?.notSame else confirmPasswordErrorTpl">
+        </div>
+        <ng-template  #confirmPasswordErrorTpl>
+          <ng-container *ngIf="registrationForm.get('confirmPassword').touched && registrationForm.errors?.notSame">
+            Введенные Вами пароли не совпадают!
+          </ng-container>
+          <ng-container *ngIf="registrationForm.get('confirmPassword').touched && registrationForm.get('confirmPassword').hasError('required')">
+            Пожалуйста повторно введите пароль!
+          </ng-container>
+        </ng-template>
+      </div>
+      <div class="register-button">
+        <button nz-button nzType="primary" [nzSize]="'large'">Зарегистрироваться</button>
+      </div>
+    </form>
+    <div class="register-error" *ngIf="registerError">Профиль с данным адресом электронной почты уже существует!</div>
   </div>
 </div>
